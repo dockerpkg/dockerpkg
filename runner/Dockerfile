@@ -4,4 +4,4 @@ RUN apk update && apk add --no-cache libstdc++ libgcc
 
 RUN mkdir /app/
 
-CMD [ "/app/app.bin" ]
+CMD ["/app/app.bin"]
