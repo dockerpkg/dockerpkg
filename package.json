@@ -1,6 +1,6 @@
 {
   "name": "dockerpkg",
-  "version": "1.0.0",
+  "version": "1.0.0-rc",
   "description": "Run node apps in small docker containers using zeit/pkg",
   "scripts": {
     "docker-build-builder": "docker build -t dockerpkg/builder:latest ./builder",
@@ -9,6 +9,9 @@
     "docker-build-runner": "docker build -t dockerpkg/runner:latest ./runner",
     "docker-push-runner": "docker push dockerpkg/runner:latest",
     "docker-run-runner": "docker run -it --name dockerpkg-runner -v $(pwd):/app/ -v $(pwd)/.pkg-cache:/root/.pkg-cache --rm dockerpkg/runner:latest"
+  },
+  "bin": {
+    "dockerpkg": "./bin/dockerpkg.js"
   },
   "keywords": [],
   "author": "Bram Borggreve @beeman_nl <borggreve@gmail.com>",
