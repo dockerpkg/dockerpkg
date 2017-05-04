@@ -24,8 +24,7 @@ const cmd = spawnSync(command, params);
 
 if (cmd.stderr.toString().length) {
   console.error(`${appName}: An error occurred: ${cmd.stderr.toString()}`)
-  console.log(`${appName}: Failed
-  .`)
+  console.log(`${appName}: Failed.`)
   process.exit(1)
 }
 
