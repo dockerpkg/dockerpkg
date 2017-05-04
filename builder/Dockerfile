@@ -1,6 +1,8 @@
 FROM node:7.9-alpine
 
-RUN apk update && apk add --no-cache git
+RUN apk update && apk add --no-cache git paxctl
+
+RUN paxctl -cm /usr/local/bin/node
 
 RUN npm install -g pkg
 
